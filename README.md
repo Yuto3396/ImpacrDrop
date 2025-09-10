@@ -1,2 +1,3 @@
-# ImpacrDrop
+# ImpactDrop
 高校生によって創始されるフィランソロピー水筒ブランド。エコ素材を使用、ボトル一本分の利益から世界の必要な人に一週間分の食料を提供します
+npx @google/gemini-cli
