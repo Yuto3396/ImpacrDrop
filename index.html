@@ -1,153 +1,168 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImpactDrop - 飲む、潤す、世界を変える。</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <!DOCTYPE html>
+    <html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ImpactDrop - 飲む、潤す、世界を変える。</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <header class="main-header">
-        <div class="container">
-            <nav class="main-nav">
-                <a href="#" class="logo">ImpactDrop</a>
-                <ul>
-                    <li><a href="#features">製品特徴</a></li>
-                    <li><a href="#details">こだわり</a></li>
-                    <li><a href="#mission">私たちの使命</a></li>
-                    <li><a href="#impact">社会貢献</a></li>
-                    <li><a href="#shop">ショップ</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>マイボトルから、もうひとつの食卓へ</h1>
-                <p>ImpactDropは、ただのボトルじゃない。世界をより良くするための、次の一歩です。</p>
-                <a href="#shop" class="btn">すべての製品を見る</a>
-            </div>
-        </section>
-
-        <section id="features" class="section section-bg-gray">
+        <header class="main-header">
             <div class="container">
-                <h2 class="section-title">未来を選ぶ、理由がある。</h2>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <h3>サステナブルな素材</h3>
-                        <p>環境負荷の少ないエコフレンドリーな素材のみを使用。自然を守りながら、最高の品質を届けます。</p>
+                <nav class="main-nav">
+                    <a href="#" class="logo">ImpactDrop</a>
+                    <ul>
+                        <li><a href="#features" data-lang-ja="製品特徴" data-lang-en="Features">製品特徴</a></li>
+                        <li><a href="#mission" data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</a></li>
+                        <li><a href="#refill-count" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
+                        <li><a href="#impact" data-lang-ja="社会貢献" data-lang-en="Our Impact">社会貢献</a></li>
+                        <li><a href="crowdfunding.html" data-lang-ja="クラウドファンディング" data-lang-en="Crowdfunding">クラウドファンディング</a></li>
+                    </ul>
+                    <div class="lang-switcher-wrapper">
+                        <button id="lang-switcher"></button>
                     </div>
-                    <div class="feature-item">
-                        <h3>洗練されたデザイン</h3>
-                        <p>どんなライフスタイルにも溶け込む、ミニマルでモダンなデザイン。ダークグリーンと黒の2色展開。</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>妥協しない機能性</h3>
-                        <p>24時間の保冷、12時間の保温機能。いつでも最適な温度で、あなたの一日をサポートします。</p>
-                    </div>
-                </div>
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <section id="details" class="section">
-            <div class="container">
-                <div class="details-text">
-                    <h2>細部へのこだわり</h2>
-                    <p>ボトル内部には、医療グレードの18/8ステンレススチールを採用。錆びにくく、飲み物の味を損ないません。BPAフリーの素材で、あなたの健康と安全を第一に考えています。</p>
-                    <p>独自の二重真空断熱構造により、驚異的な保温・保冷性能を実現。手入れのしやすい広口設計で、いつでも清潔に保てます。</p>
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <h1 data-lang-ja="マイボトルから、もうひとつの食卓へ" data-lang-en="From Your Bottle to Their Table">マイボトルから、もうひとつの食卓へ</h1>
+                    <p data-lang-ja="ImpactDropは、ただのボトルじゃない。世界をより良くするための、次の一歩です。" data-lang-en="ImpactDrop is more than just a bottle. It's the next step toward a better world.">ImpactDropは、ただのボトルじゃない。世界をより良くするための、次の一歩です。</p>
+                    <a href="#shop" class="btn" data-lang-ja="すべての製品を見る" data-lang-en="View All Products">すべての製品を見る</a>
                 </div>
-                <div class="details-image">
-                    <img src="images/IMG_7064.JPG" alt="製品内部の高品質なステンレススチール">
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="mission" class="section section-bg-gray">
-            <div class="container mission-container">
-                <div class="mission-image-wrapper">
-                    <img src="images/Gemini_Generated_Image_6rczgw6rczgw6rcz.png" alt="ブランドミッション">
-                    <div class="mission-statement">
-                        <p>ブランドミッション：人々が日常の選択を通じて、世界にポジティブなインパクトをもたらせるようにする</p>
-                    </div>
-                </div>
-                <div class="mission-description">
-                    <h2>私たちの使命</h2>
-                    <p>ImpactDropは、単なる製品ブランドではありません。私たちは、消費を通じて世界にポジティブな影響を与えることを使命としています。安全な水、栄養価の高い食事、そして教育の機会を、最も必要としている人々に届けること。それが私たちの原動力です。</p>
-                    <p>あなたの日々の選択が、誰かの未来を創造する。私たちは、その架け橋となることを約束します。</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="impact" class="section impact-section">
-            <div class="container">
-                <div class="impact-content">
-                    <div class="wfp-logo-wrapper">
-                        <img src="images/WFP logo.png" alt="国連WFPロゴ">
-                    </div>
-                    <h2>あなたの選択が、1週間の希望になる。</h2>
-                    <p>ImpactDropは、国連世界食糧計画（WFP）と連携し、飢餓に苦しむ人々へ食糧を届ける活動を支援しています。</p>
-                    <div class="impact-details-grid">
-                        <div class="impact-detail-item">
-                            <h3>ボトル1本が...</h3>
-                            <p class="large-text">7日分</p>
-                            <p>の食事に変わります。ボトル1本の利益（560円）が、国連WFPを通じて必要とする人々の1週間分の食糧になります。</p>
+            <section id="features" class="section section-bg-gray">
+                <div class="container">
+                    <h2 class="section-title" data-lang-ja="未来を選ぶ、理由がある。" data-lang-en="The Future is Clear. The Choice is Yours.">未来を選ぶ、理由がある。</h2>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <h3 data-lang-ja="サステナブルな素材" data-lang-en="Sustainable Materials">サステナブルな素材</h3>
+                            <p data-lang-ja="環境負荷の少ないエコフレンドリーな素材のみを使用。自然を守りながら、最高の品質を届けます。" data-lang-en="We use only eco-friendly materials with a low environmental impact, delivering the highest quality while protecting nature.">環境負荷の少ないエコフレンドリーな素材のみを使用。自然を守りながら、最高の品質を届けます。</p>
                         </div>
-                        <div class="impact-detail-item">
-                            <h3>国連WFPの約束</h3>
-                            <p class="large-text">40円</p>
-                            <p>で、栄養価の高い学校給食を1人の子どもに1食届けることができます。</p>
+                        <div class="feature-item">
+                            <h3 data-lang-ja="洗練されたデザイン" data-lang-en="Sophisticated Design">洗練されたデザイン</h3>
+                            <p data-lang-ja="どんなライフスタイルにも溶け込む、ミニマルでモダンなデザイン。ダークグリーンと黒の2色展開。" data-lang-en="A minimal, modern design that blends into any lifestyle. Available in dark green and matte black.">どんなライフスタイルにも溶け込む、ミニマルでモダンなデザイン。ダークグリーンと黒の2色展開。</p>
                         </div>
-                    </div>
-                    <div class="impact-counter-wrapper">
-                        <p>私たちがこれまでに届けた食事</p>
-                        <div class="impact-counter">1,234,567食</div>
-                        <p>この数字は、あなたと共に創り上げたものです。ありがとうございます。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="shop" class="section section-bg-gray">
-            <div class="container">
-                <h2 class="section-title">製品ラインナップ</h2>
-                <div class="shop-grid">
-                    <div class="product-card">
-                        <img src="images/IMG_7062.JPG" alt="ImpactDrop ボトル - ダークグリーン">
-                        <div class="product-info">
-                            <h3>ImpactDrop Bottle</h3>
-                            <p class="product-color">ダークグリーン</p>
-                            <p class="product-price">¥4,980</p>
-                            <a href="#" class="btn">カートに入れる</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <img src="images/IMG_7063.JPG" alt="ImpactDrop ボトル - マットブラック">
-                        <div class="product-info">
-                            <h3>ImpactDrop Bottle</h3>
-                            <p class="product-color">マットブラック</p>
-                            <p class="product-price">¥4,980</p>
-                            <a href="#" class="btn">カートに入れる</a>
+                        <div class="feature-item">
+                            <h3 data-lang-ja="妥協しない機能性" data-lang-en="Uncompromising Functionality">妥協しない機能性</h3>
+                            <p data-lang-ja="24時間の保冷、12時間の保温機能。いつでも最適な温度で、あなたの一日をサポートします。" data-lang-en="24-hour cold and 12-hour hot retention. Supporting your day at the perfect temperature, anytime.">24時間の保冷、12時間の保温機能。いつでも最適な温度で、あなたの一日をサポートします。</p>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section id="details" class="section">
+                <div class="container">
+                    <div class="details-text">
+                        <h2 data-lang-ja="細部へのこだわり" data-lang-en="Attention to Detail">細部へのこだわり</h2>
+                        <p data-lang-ja="ボトル内部には、医療グレードの18/8ステンレススチールを採用。錆びにくく、飲み物の味を損ないません。BPAフリーの素材で、あなたの健康と安全を第一に考えています。" data-lang-en="The interior is made of medical-grade 18/8 stainless steel, which is rust-resistant and preserves the original taste of your drink. Made with BPA-free materials, prioritizing your health and safety.">ボトル内部には、医療グレードの18/8ステンレススチールを採用。錆びにくく、飲み物の味を損ないません。BPAフリーの素材で、あなたの健康と安全を第一に考えています。</p>
+                        <p data-lang-ja="独自の二重真空断熱構造により、驚異的な保温・保冷性能を実現。手入れのしやすい広口設計で、いつでも清潔に保てます。" data-lang-en="Our unique double-wall vacuum insulation provides incredible temperature retention. The wide-mouth design makes it easy to clean and maintain.">独自の二重真空断熱構造により、驚異的な保温・保冷性能を実現。手入れのしやすい広口設計で、いつでも清潔に保てます。</p>
+                    </div>
+                    <div class="details-image">
+                        <img src="images/IMG_7064.JPG" alt="製品内部の高品質なステンレススチール" data-lang-ja-alt="製品内部の高品質なステンレススチール" data-lang-en-alt="High-quality stainless steel interior of the product">
+                    </div>
+                </div>
+            </section>
+
+            <section id="mission" class="section section-bg-gray">
+                <div class="container mission-container">
+                    <div class="mission-image-wrapper">
+                        <img src="images/Gemini_Generated_Image_6rczgw6rczgw6rcz.png" alt="ブランドミッション" data-lang-ja-alt="ブランドミッション" data-lang-en-alt="Our Mission">
+                        <div class="mission-statement">
+                            <p data-lang-ja="ブランドミッション：人々が日常の選択を通じて、世界にポジティブなインパクトをもたらせるようにする" data-lang-en="Our Mission: To empower people to make a positive impact on the world through their daily choices.">ブランドミッション：人々が日常の選択を通じて、世界にポジティブなインパクトをもたらせるようにする</p>
+                        </div>
+                    </div>
+                    <div class="mission-description">
+                        <h2 data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</h2>
+                        <p data-lang-ja="私たちの使命は、社会貢献を「特別なこと」から「日常の一部」に変えることです。" data-lang-en="Our mission is to change social contribution from something &quot;special&quot; to a &quot;part of daily life.&quot;">私たちの使命は、社会貢献を「特別なこと」から「日常の一部」に変えることです。</p>
+                        <p data-lang-ja="ImpactDropは、あなたの毎日のリフィルや行動を記録し、それが世界の誰かの希望に変わる仕組みをつくります。" data-lang-en="ImpactDrop records your daily refills and actions, creating a system where that turns into hope for someone in the world.">ImpactDropは、あなたの毎日のリフィルや行動を記録し、それが世界の誰かの希望に変わる仕組みをつくります。</p>
+                        <p data-lang-ja="小さな行動が積み重なれば、社会は必ず変えられる。" data-lang-en="If small actions accumulate, society can definitely be changed.">小さな行動が積み重なれば、社会は必ず変えられる。</p>
+                        <p data-lang-ja="その“第一滴（ファーストドロップ）”を生み出すのが、私たちの役割です。" data-lang-en="Our role is to create that &quot;first drop&quot;.">その“第一滴（ファーストドロップ）”を生み出すのが、私たちの役割です。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="refill-count" class="section">
+                <div class="container">
+                    <h2 class="section-title" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</h2>
+                    <p data-lang-ja="リフィル1000回ごとに、1000円を慈善団体に寄付します。" data-lang-en="For every 1000 refills, we donate 1000 JPY to charity.">リフィル1000回ごとに、1000円を慈善団体に寄付します。</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="refill-progress-bar"></div>
+                    </div>
+                    <p><span id="refill-count-display">0</span>/1000</p>
+                    <button id="refill-button" class="btn" data-lang-ja="リフィルしました" data-lang-en="I Refilled!">リフィルしました</button>
+                </div>
+            </section>
+
+            <section id="impact" class="section impact-section">
+                <div class="container">
+                    <div class="impact-content">
+                        <h2 data-lang-ja="あなたの選択が、世界を変える力になる。" data-lang-en="Your Choice, A Force for Change.">あなたの選択が、世界を変える力になる。</h2>
+                        <p data-lang-ja="ImpactDropは、世界の様々な慈善団体と連携し、困難な状況にある人々を支援する活動に貢献しています。" data-lang-en="ImpactDrop partners with various charitable organizations around the world to contribute to activities that support people in difficult situations.">ImpactDropは、世界の様々な慈善団体と連携し、困難な状況にある人々を支援する活動に貢献しています。</p>
+                        <div class="impact-details-grid">
+                            <div class="impact-detail-item">
+                                <h3 data-lang-ja="ボトル1本が..." data-lang-en="One Bottle...">ボトル1本が...</h3>
+                                <p class="large-text" data-lang-ja="希望" data-lang-en="Hope">希望</p>
+                                <p data-lang-ja="に変わります。製品の利益は、食糧、安全な水、教育など、最も支援を必要とする分野で活動する団体へ寄付されます。" data-lang-en="...becomes hope. Profits from our products are donated to organizations working in areas of greatest need, such as food, safe water, and education.">に変わります。製品の利益は、食糧、安全な水、教育など、最も支援を必要とする分野で活動する団体へ寄付されます。</p>
+                            </div>
+                            <div class="impact-detail-item">
+                                <h3 data-lang-ja="広がる支援の輪" data-lang-en="Expanding Circle of Support">広がる支援の輪</h3>
+                                <p class="large-text" data-lang-ja="多様な" data-lang-en="Diverse">多様な</p>
+                                <p data-lang-ja="活動へ。私たちは、特定の分野に限定せず、世界中の様々な課題解決に取り組む団体を支援します。" data-lang-en="support. We support organizations that tackle a wide range of global issues, not limited to a specific field.">活動へ。私たちは、特定の分野に限定せず、世界中の様々な課題解決に取り組む団体を支援します。</p>
+                            </div>
+                        </div>
+                        <div class="impact-counter-wrapper">
+                            <p data-lang-ja="私たちがこれまでに届けた支援" data-lang-en="Support We've Delivered So Far">私たちがこれまでに届けた支援</p>
+                            <div class="impact-counter">$12,345</div>
+                            <p data-lang-ja="この数字は、あなたと共に創り上げたものです。ありがとうございます。" data-lang-en="This number was built together with you. Thank you.">この数字は、あなたと共に創り上げたものです。ありがとうございます。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="shop" class="section section-bg-gray">
+                <div class="container">
+                    <h2 class="section-title" data-lang-ja="製品ラインナップ" data-lang-en="Our Products">製品ラインナップ</h2>
+                    <div class="shop-grid">
+                        <div class="product-card">
+                            <img src="images/IMG_7062.JPG" alt="ImpactDrop ボトル - ダークグリーン" data-lang-ja-alt="ImpactDrop ボトル - ダークグリーン" data-lang-en-alt="ImpactDrop Bottle - Dark Green">
+                            <div class="product-info">
+                                <h3>ImpactDrop Bottle</h3>
+                                <p class="product-color" data-lang-ja="ダークグリーン" data-lang-en="Dark Green">ダークグリーン</p>
+                                <p class="product-price">¥4,980</p>
+                                <a href="#" class="btn" data-lang-ja="カートに入れる" data-lang-en="Add to Cart">カートに入れる</a>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <img src="images/IMG_7063.JPG" alt="ImpactDrop ボトル - マットブラック" data-lang-ja-alt="ImpactDrop ボトル - マットブラック" data-lang-en-alt="ImpactDrop Bottle - Matte Black">
+                            <div class="product-info">
+                                <h3>ImpactDrop Bottle</h3>
+                                <p class="product-color" data-lang-ja="マットブラック" data-lang-en="Matte Black">マットブラック</p>
+                                <p class="product-price">¥4,980</p>
+                                <a href="#" class="btn" data-lang-ja="カートに入れる" data-lang-en="Add to Cart">カートに入れる</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="main-footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                </div>
             </div>
-        </section>
+        </footer>
 
-    </main>
-
-    <footer class="main-footer-bottom">
-        <div class="container">
-            <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
-                <a href="#">Twitter</a>
-                <a href="#">Facebook</a>
-            </div>
-        </div>
-    </footer>
-
-</body>
-</html>
+        <script src="script.js"></script>
+    </body>
+    </html>

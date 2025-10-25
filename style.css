@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 6rem; /* 固定ヘッダーの高さ分をオフセット */
 }
 
 :root {
@@ -22,6 +23,52 @@ body {
     color: var(--text-color);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    background: linear-gradient(to bottom, var(--white), var(--bg-gray));
+}
+
+/* Crowdfunding Page Specifics */
+#crowdfunding-hero {
+    background: linear-gradient(rgba(10, 46, 27, 0.8), rgba(10, 46, 27, 0.6)), url('images/Gemini_Generated_Image_497nt2497nt2497n.png') no-repeat center center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0;
+}
+#crowdfunding-hero h1 {
+    color: var(--white);
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+#crowdfunding-hero p {
+    max-width: 700px;
+    margin: 1rem auto 0 auto;
+    font-size: 1.1rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.detail-item h3 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#our-vision {
+    text-align: center;
+}
+#our-vision p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-links-center {
+    text-align: center;
+    margin-top: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -156,11 +203,13 @@ img {
 /* Details Section */
 #details .container {
     display: flex;
-    align-items: center;
+    flex-direction: column; /* 縦並びに変更 */
+    align-items: center; /* 中央揃え */
     gap: 4rem;
+    text-align: center; /* テキストも中央揃え */
 }
-.details-text { flex-basis: 50%; }
-.details-image { flex-basis: 50%; }
+.details-text { flex-basis: 100%; } /* 幅を100%に */
+.details-image { flex-basis: 100%; } /* 幅を100%に */
 .details-image img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 .details-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
 
@@ -256,6 +305,33 @@ img {
 .product-card h3 { font-size: 1.5rem; }
 .product-price { font-size: 1.2rem; font-weight: bold; margin: 0.5rem 0 1.5rem 0; }
 
+/* Language Switcher */
+.lang-switcher-wrapper {
+    margin-left: 1rem;
+}
+#lang-switcher {
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+#lang-switcher:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .lang-switcher-wrapper {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+}
+
 /* Footer */
 .main-footer-bottom {
     background-color: #333;
@@ -330,7 +406,18 @@ img {
     h2, .section-title { font-size: 2.2rem; }
 
     .main-nav { flex-direction: column; }
-    .main-nav ul { margin-top: 1rem; }
+    .main-nav ul {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav ul li {
+        margin: 0.2rem;
+    }
+    .main-nav ul li a {
+        padding: 0 0.6rem; /* パディングも少し詰める */
+        font-size: 0.9rem;
+    }
 
     #details .container, .about-content { flex-direction: column; text-align: center; }
 
@@ -343,4 +430,105 @@ img {
 
     .main-footer-bottom .container { flex-direction: column; }
     .social-links { margin-top: 1rem; }
+}
+
+/* Smartphone Responsive */
+@media (max-width: 480px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    #hero {
+        height: 80vh; /* 少し高さを抑える */
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* h1をさらに小さく */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem; /* セクションタイトルも調整 */
+        margin-bottom: 3rem;
+    }
+
+    .mission-statement p {
+        font-size: 1.5rem; /* 画像上のテキストを調整 */
+    }
+
+    .large-text {
+        font-size: 3rem; /* WFPセクションの大きなテキスト */
+    }
+
+    .impact-counter {
+        font-size: 4rem; /* カウンターのテキスト */
+    }
+}
+
+#refill-count {
+    position: relative;
+    text-align: center;
+    background: url('images/Gemini_Generated_Image_kxmv3vkxmv3vkxmv.png') no-repeat center center/cover;
+    color: var(--primary-color); /* テキストの色を濃くして読みやすくする */
+}
+
+#refill-count::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8); /* 白いオーバーレイ */
+    z-index: 1;
+}
+
+#refill-count .container {
+    position: relative;
+    z-index: 2;
+}
+
+.progress-bar-container {
+    width: 80%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    transition: width 0.5s ease-in-out;
+}
+
+#refill-count-display {
+    font-weight: bold;
+}
+
+#refill-button {
+    margin-top: 20px;
+}
+
+#funding-progress {
+    text-align: center;
+}
+
+.funding-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.funding-stats .large-text {
+    font-size: 3rem;
+    color: var(--primary-color);
 }
