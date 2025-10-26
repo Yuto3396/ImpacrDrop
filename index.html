@@ -6,6 +6,7 @@
         <title>ImpactDrop - 飲む、潤す、世界を変える。</title>
         <link rel="stylesheet" href="style.css">
     </head>
+    
     <body>
 
         <header class="main-header">
@@ -94,6 +95,7 @@
                         <div class="progress-bar" id="refill-progress-bar"></div>
                     </div>
                     <p><span id="refill-count-display">0</span>/1000</p>
+                    <p id="refill-info">次の寄付まであと 1000 リフィル（0 / 1000）</p>
                     <button id="refill-button" class="btn" data-lang-ja="リフィルしました" data-lang-en="I Refilled!">リフィルしました</button>
                 </div>
             </section>
@@ -133,8 +135,7 @@
                             <div class="product-info">
                                 <h3>ImpactDrop Bottle</h3>
                                 <p class="product-color" data-lang-ja="ダークグリーン" data-lang-en="Dark Green">ダークグリーン</p>
-                                <p class="product-price">¥4,980</p>
-                                <a href="#" class="btn" data-lang-ja="カートに入れる" data-lang-en="Add to Cart">カートに入れる</a>
+                                <p class="coming-soon" data-lang-ja="近日発売" data-lang-en="Coming Soon">近日発売</p>
                             </div>
                         </div>
                         <div class="product-card">
@@ -142,8 +143,7 @@
                             <div class="product-info">
                                 <h3>ImpactDrop Bottle</h3>
                                 <p class="product-color" data-lang-ja="マットブラック" data-lang-en="Matte Black">マットブラック</p>
-                                <p class="product-price">¥4,980</p>
-                                <a href="#" class="btn" data-lang-ja="カートに入れる" data-lang-en="Add to Cart">カートに入れる</a>
+                                <p class="coming-soon" data-lang-ja="近日発売" data-lang-en="Coming Soon">近日発売</p>
                             </div>
                         </div>
                     </div>
@@ -164,5 +164,50 @@
         </footer>
 
         <script src="script.js"></script>
+        <!-- ▼▼ ImpactDrop Refill（GAS連携） ▼▼ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbxoFi6RS2sDvXV_8Re1m9RB4zniRKE_DzQWOlKHzsEeEEyjm8xUuOOXBBBQrA8XHFCx/exec";
+
+  // HTML内の要素（IDはあなたのHTMLに合わせてあります）
+  const $count = document.getElementById('refill-count-display');
+  const $bar   = document.getElementById('refill-progress-bar');
+  const $info  = document.getElementById('refill-info');
+  const $btn   = document.getElementById('refill-button');
+
+  const setBar = (pct) => { if ($bar) $bar.style.width = Math.min(100, Math.max(0, pct)) + '%'; };
+
+  function render(d){
+    if(!$count || !$bar || !$info) return;
+    $count.textContent = d.count;
+    setBar(d.progressPct);
+    $info.textContent = `次の寄付まであと ${d.remaining} リフィル（${d.progress} / ${d.goal}）`;
+  }
+
+  async function fetchState(){
+    const r = await fetch(GAS_URL);
+    const d = await r.json();
+    if(d?.ok) render(d);
+  }
+
+  async function addRefill(){
+    if(!$btn) return;
+    $btn.disabled = true;
+    try{
+      const r = await fetch(GAS_URL, { method:'POST' });
+      const d = await r.json();
+      if(d?.ok) render(d);
+    } catch(e){
+      alert('更新に失敗しました。時間をおいて再度お試しください。');
+    } finally {
+      $btn.disabled = false;
+    }
+  }
+
+  if($btn) $btn.addEventListener('click', addRefill);
+  fetchState();
+});
+</script>
+<!-- ▲▲ ImpactDrop Refill（GAS連携） ▲▲ -->
     </body>
     </html>

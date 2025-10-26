@@ -304,6 +304,7 @@ img {
 .product-info { padding: 1.5rem; }
 .product-card h3 { font-size: 1.5rem; }
 .product-price { font-size: 1.2rem; font-weight: bold; margin: 0.5rem 0 1.5rem 0; }
+.coming-soon { font-size: 1.2rem; font-weight: bold; margin: 0.5rem 0 1.5rem 0; color: #999; }
 
 /* Language Switcher */
 .lang-switcher-wrapper {
