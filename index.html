@@ -13,17 +13,30 @@
             <div class="container">
                 <nav class="main-nav">
                     <a href="#" class="logo">ImpactDrop</a>
+                    <ul class="desktop-nav">
+                        <li><a href="refill-count.html" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
+                        <li><a href="crowdfunding.html" data-lang-ja="クラウドファンディング" data-lang-en="Crowdfunding">クラウドファンディング</a></li>
+                    </ul>
+                    <div class="nav-right">
+                        <div class="lang-switcher-wrapper">
+                            <button id="lang-switcher"></button>
+                        </div>
+                        <button class="hamburger-menu" id="hamburger-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </div>
+                </nav>
+                <div class="mobile-nav" id="mobile-nav">
                     <ul>
                         <li><a href="#features" data-lang-ja="製品特徴" data-lang-en="Features">製品特徴</a></li>
                         <li><a href="#mission" data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</a></li>
-                        <li><a href="#refill-count" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
                         <li><a href="#impact" data-lang-ja="社会貢献" data-lang-en="Our Impact">社会貢献</a></li>
+                        <li><a href="refill-count.html" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
                         <li><a href="crowdfunding.html" data-lang-ja="クラウドファンディング" data-lang-en="Crowdfunding">クラウドファンディング</a></li>
                     </ul>
-                    <div class="lang-switcher-wrapper">
-                        <button id="lang-switcher"></button>
-                    </div>
-                </nav>
+                </div>
             </div>
         </header>
 
@@ -87,18 +100,7 @@
                 </div>
             </section>
 
-            <section id="refill-count" class="section">
-                <div class="container">
-                    <h2 class="section-title" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</h2>
-                    <p data-lang-ja="リフィル1000回ごとに、1000円を慈善団体に寄付します。" data-lang-en="For every 1000 refills, we donate 1000 JPY to charity.">リフィル1000回ごとに、1000円を慈善団体に寄付します。</p>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" id="refill-progress-bar"></div>
-                    </div>
-                    <p><span id="refill-count-display">0</span>/1000</p>
-                    <p id="refill-info">次の寄付まであと 1000 リフィル（0 / 1000）</p>
-                    <button id="refill-button" class="btn" data-lang-ja="リフィルしました" data-lang-en="I Refilled!">リフィルしました</button>
-                </div>
-            </section>
+
 
             <section id="impact" class="section impact-section">
                 <div class="container">

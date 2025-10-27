@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>リフィルカウント - ImpactDrop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="index.html" class="logo">ImpactDrop</a>
+                <ul class="desktop-nav">
+                    <li><a href="refill-count.html" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
+                    <li><a href="crowdfunding.html" data-lang-ja="クラウドファンディング" data-lang-en="Crowdfunding">クラウドファンディング</a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="lang-switcher-wrapper">
+                        <button id="lang-switcher"></button>
+                    </div>
+                    <button class="hamburger-menu" id="hamburger-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="mobile-nav" id="mobile-nav">
+                <ul>
+                    <li><a href="index.html#features" data-lang-ja="製品特徴" data-lang-en="Features">製品特徴</a></li>
+                    <li><a href="index.html#mission" data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</a></li>
+                    <li><a href="index.html#impact" data-lang-ja="社会貢献" data-lang-en="Our Impact">社会貢献</a></li>
+                    <li><a href="refill-count.html" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</a></li>
+                    <li><a href="crowdfunding.html" data-lang-ja="クラウドファンディング" data-lang-en="Crowdfunding">クラウドファンディング</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hunger-problem" class="section section-bg-gray">
+            <div class="container">
+                <h2 class="section-title" data-lang-ja="深刻化する飢餓問題" data-lang-en="The worsening hunger problem">深刻化する飢餓問題</h2>
+                <p data-lang-ja="リフィルによる寄付は、深刻化する世界の飢餓問題の解決のために使われます。近年勃発する戦争や気候変動、そして経済衝撃・価格高騰などによって、世界の飢餓人口は悪化の一途をたどっています。解決には一刻の猶予もありません。あなたの一杯が、世界の誰かの希望になります。" data-lang-en="Donations from refills are used to solve the worsening global hunger problem. The number of people suffering from hunger is on the rise due to recent wars, climate change, and economic shocks/price hikes. There is no time to lose in solving this problem. Your single refill becomes hope for someone in the world.">リフィルによる寄付は、深刻化する世界の飢餓問題の解決のために使われます。近年勃発する戦争や気候変動、そして経済衝撃・価格高騰などによって、世界の飢餓人口は悪化の一途をたどっています。解決には一刻の猶予もありません。あなたの一杯が、世界の誰かの希望になります。</p>
+            </div>
+        </section>
+
+        <section id="refill-count" class="section">
+            <div class="container">
+                <h2 class="section-title" data-lang-ja="リフィルカウント" data-lang-en="Refill Count">リフィルカウント</h2>
+                <p data-lang-ja="リフィル1000回ごとに、1000円を飢餓問題に取り組む慈善団体に寄付します。" data-lang-en="For every 1000 refills, we donate 1000 JPY to charities working on the hunger problem.">リフィル1000回ごとに、1000円を飢餓問題に取り組む慈善団体に寄付します。</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="refill-progress-bar"></div>
+                </div>
+                <p><span id="refill-count-display">0</span>/1000</p>
+                <p id="refill-info">次の寄付まであと 1000 リフィル（0 / 1000）</p>
+                <button id="refill-button" class="btn" data-lang-ja="リフィルしました" data-lang-en="I Refilled!">リフィルしました</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-bottom">
+        <div class="container">
+            <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- ▼▼ ImpactDrop Refill（GAS連携） ▼▼ -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const GAS_URL = "https://script.google.com/macros/s/AKfycbx5dfmzxJ8o2UwYW8LdKUhaSH80ojAy_UAVFgj0fcUpP1GQFj9QrA5pPXEiKtV4ohcH/exec";
+
+  // HTML内の要素（IDはあなたのHTMLに合わせてあります）
+  const $count = document.getElementById('refill-count-display');
+  const $bar   = document.getElementById('refill-progress-bar');
+  const $info  = document.getElementById('refill-info');
+  const $btn   = document.getElementById('refill-button');
+
+  const setBar = (pct) => { if ($bar) $bar.style.width = Math.min(100, Math.max(0, pct)) + '%'; };
+
+  function render(d){
+    if(!$count || !$bar || !$info) return;
+    $count.textContent = d.count;
+    setBar(d.progressPct);
+    $info.textContent = `次の寄付まであと ${d.remaining} リフィル（${d.progress} / ${d.goal}）`;
+  }
+
+  async function fetchState(){
+    const r = await fetch(GAS_URL);
+    const d = await r.json();
+    if(d?.ok) render(d);
+  }
+
+  async function addRefill(){
+    if(!$btn) return;
+    $btn.disabled = true;
+    try{
+      const r = await fetch(GAS_URL, { method:'POST' });
+      const d = await r.json();
+      if(d?.ok) render(d);
+    } catch(e){
+      alert('更新に失敗しました。時間をおいて再度お試しください。');
+    } finally {
+      $btn.disabled = false;
+    }
+  }
+
+  if($btn) $btn.addEventListener('click', addRefill);
+  fetchState();
+});
+</script>
+<!-- ▲▲ ImpactDrop Refill（GAS連携） ▲▲ -->
+</body>
+</html>

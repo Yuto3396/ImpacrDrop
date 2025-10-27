@@ -1,18 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
     const langSwitcher = document.getElementById('lang-switcher');
-    // data-lang-ja属性を持つすべての要素を取得
     const translatableElements = document.querySelectorAll('[data-lang-ja]');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    const body = document.body;
+
+    // Page transition logic
+    const handleLinkClick = (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const url = link.href;
+        // Only apply to internal, non-anchor links
+        if (url.includes(window.location.host) && !url.includes('#')) {
+            e.preventDefault();
+            body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 400); // Match CSS transition duration
+        }
+    };
+
+    document.addEventListener('click', handleLinkClick);
 
     const switchLanguage = (lang) => {
         translatableElements.forEach(el => {
-            // alt属性も翻訳対象にする
             if (el.tagName === 'IMG' && el.dataset.langJaAlt) {
                 if (lang === 'ja') {
                     el.alt = el.dataset.langJaAlt;
                 } else {
                     el.alt = el.dataset.langEnAlt;
                 }
-            } else { // それ以外の要素はテキスト内容を切り替え
+            } else { 
                 if (lang === 'ja') {
                     el.textContent = el.dataset.langJa;
                 } else {
@@ -21,22 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // ボタンのテキストと状態を更新
         langSwitcher.textContent = lang === 'ja' ? 'English' : '日本語';
         langSwitcher.dataset.currentLang = lang;
-        // 言語設定をブラウザに保存
         localStorage.setItem('preferredLanguage', lang);
     };
 
-    // ボタンクリック時のイベント
     langSwitcher.addEventListener('click', () => {
         const currentLang = langSwitcher.dataset.currentLang || 'ja';
         const nextLang = currentLang === 'ja' ? 'en' : 'ja';
         switchLanguage(nextLang);
     });
 
-    // ページ読み込み時に、保存された言語設定またはデフォルト言語を適用
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'ja'; // デフォルトは日本語
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'ja';
     switchLanguage(preferredLanguage);
 
     const refillButton = document.getElementById('refill-button');
@@ -46,9 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let refillCount = localStorage.getItem('refillCount') ? parseInt(localStorage.getItem('refillCount')) : 0;
 
     function updateRefillCounter() {
-        const progress = (refillCount % 1000) / 10; // 1000回で100%
-        refillProgressBar.style.width = progress + '%';
-        refillCountDisplay.textContent = refillCount % 1000;
+        const progress = (refillCount % 1000) / 10;
+        if (refillProgressBar) {
+            refillProgressBar.style.width = progress + '%';
+        }
+        if (refillCountDisplay) {
+            refillCountDisplay.textContent = refillCount % 1000;
+        }
         localStorage.setItem('refillCount', refillCount);
     }
 
@@ -60,4 +79,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     updateRefillCounter();
+
+    if (hamburgerMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            hamburgerMenu.classList.toggle('active');
+            mobileNav.classList.toggle('active');
+        });
+    }
+
+    // Close mobile nav on link click
+    if (mobileNav) {
+        mobileNav.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                hamburgerMenu.classList.remove('active');
+                mobileNav.classList.remove('active');
+            }
+        });
+    }
 });
