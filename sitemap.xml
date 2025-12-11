@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://impactdrop.org/</loc>
   </url>
+
+  <url>
+    <loc>https://impactdrop.org/index.html</loc>
+  </url>
+
+  <url>
+    <loc>https://impactdrop.org/crowdfunding.html</loc>
+  </url>
+
+  <url>
+    <loc>https://impactdrop.org/refill-count.html</loc>
+  </url>
+
 </urlset>
