@@ -540,6 +540,15 @@ img {
     color: var(--primary-color);
 }
 
+.app-screenshot {
+    display: block;
+    margin: 2rem auto;
+    max-width: 80%; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none; /* Initially hidden */
