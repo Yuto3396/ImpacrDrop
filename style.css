@@ -33,6 +33,31 @@ body.fade-out {
 }
 
 /* Crowdfunding Page Specifics */
+#company-profile-hero {
+    position: relative;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0;
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+#company-profile-hero::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(rgba(10, 46, 27, 0.6), rgba(10, 46, 27, 0.8)), url('images/Gemini_Generated_Image_497nt2497nt2497n.png') no-repeat center center/cover;
+    filter: blur(5px);
+    z-index: 1;
+}
+
+#company-profile-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
 #crowdfunding-hero {
     background: linear-gradient(rgba(10, 46, 27, 0.8), rgba(10, 46, 27, 0.6)), url('images/Gemini_Generated_Image_497nt2497nt2497n.png') no-repeat center center/cover;
     color: var(--white);
@@ -81,6 +106,15 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: var(--primary-color);
     font-weight: 700;
+}
+
+#company-profile-hero h1 {
+    color: var(--white);
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Add text shadow for better contrast */
+}
+
+#how-to-support p {
+    text-align: center;
 }
 
 .container {
@@ -218,6 +252,28 @@ img {
 .details-image { flex-basis: 100%; } /* 幅を100%に */
 .details-image img { border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
 .details-text h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+
+/* App Features Section Additions */
+#app-features .details-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.app-features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 900px;
+    margin: 4rem auto 0 auto;
+}
+
+@media (max-width: 768px) {
+    .app-features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 /* Impact Section */
 .impact-section {
@@ -625,4 +681,116 @@ img {
 
 .hamburger-menu {
     display: block;
+}
+
+/* App Features Carousel */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 3rem auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 70vh; /* Set a fixed height for the viewport */
+}
+
+.carousel-track {
+    display: flex;
+    height: 100%; /* Make track fill container height */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the area for normal slides */
+}
+
+.carousel-slide.smartphone-view {
+    background-color: #000;
+}
+
+.carousel-slide.smartphone-view img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Contain the image within the slide's bounds */
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-dot.active {
+    background-color: var(--white);
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 60vh; /* Adjust height for smaller screens */
+    }
+    .carousel-button {
+        font-size: 1.5rem;
+        width: 40px;
+        height: 40px;
+    }
+    .carousel-dots {
+        bottom: 10px;
+    }
 }

@@ -40,45 +40,23 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        langSwitcher.textContent = lang === 'ja' ? 'English' : '日本語';
-        langSwitcher.dataset.currentLang = lang;
+        if (langSwitcher) {
+            langSwitcher.textContent = lang === 'ja' ? 'English' : '日本語';
+            langSwitcher.dataset.currentLang = lang;
+        }
         localStorage.setItem('preferredLanguage', lang);
     };
 
-    langSwitcher.addEventListener('click', () => {
-        const currentLang = langSwitcher.dataset.currentLang || 'ja';
-        const nextLang = currentLang === 'ja' ? 'en' : 'ja';
-        switchLanguage(nextLang);
-    });
-
-    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'ja';
-    switchLanguage(preferredLanguage);
-
-    const refillButton = document.getElementById('refill-button');
-    const refillProgressBar = document.getElementById('refill-progress-bar');
-    const refillCountDisplay = document.getElementById('refill-count-display');
-
-    let refillCount = localStorage.getItem('refillCount') ? parseInt(localStorage.getItem('refillCount')) : 0;
-
-    function updateRefillCounter() {
-        const progress = (refillCount % 1000) / 10;
-        if (refillProgressBar) {
-            refillProgressBar.style.width = progress + '%';
-        }
-        if (refillCountDisplay) {
-            refillCountDisplay.textContent = refillCount % 1000;
-        }
-        localStorage.setItem('refillCount', refillCount);
-    }
-
-    if (refillButton) {
-        refillButton.addEventListener('click', function() {
-            refillCount++;
-            updateRefillCounter();
+    if (langSwitcher) {
+        langSwitcher.addEventListener('click', () => {
+            const currentLang = langSwitcher.dataset.currentLang || 'ja';
+            const nextLang = currentLang === 'ja' ? 'en' : 'ja';
+            switchLanguage(nextLang);
         });
     }
 
-    updateRefillCounter();
+    const preferredLanguage = localStorage.getItem('preferredLanguage') || 'ja';
+    switchLanguage(preferredLanguage);
 
     if (hamburgerMenu) {
         hamburgerMenu.addEventListener('click', () => {
@@ -95,5 +73,119 @@ document.addEventListener('DOMContentLoaded', () => {
                 mobileNav.classList.remove('active');
             }
         });
+    }
+
+    // Carousel Logic
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        const track = document.querySelector('.carousel-track');
+        const slides = Array.from(track.children);
+        const nextButton = document.querySelector('.carousel-button.next');
+        const prevButton = document.querySelector('.carousel-button.prev');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        if (slides.length === 0) return;
+
+        let currentIndex = 0;
+        let slideWidth = slides[0].getBoundingClientRect().width;
+
+        // Create dots
+        slides.forEach((slide, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = Array.from(dotsContainer.children);
+
+        const updateCarousel = () => {
+            track.style.transform = 'translateX(-' + slideWidth * currentIndex + 'px)';
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+            prevButton.style.display = currentIndex === 0 ? 'none' : 'flex';
+            nextButton.style.display = currentIndex === slides.length - 1 ? 'none' : 'flex';
+        };
+
+        const goToNext = () => {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                updateCarousel();
+            }
+        };
+
+        const goToPrev = () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateCarousel();
+            }
+        };
+
+        nextButton.addEventListener('click', goToNext);
+        prevButton.addEventListener('click', goToPrev);
+
+        // Swipe functionality
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+        let isSwiping = false;
+
+        track.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            touchStartY = e.touches[0].clientY;
+            isSwiping = true;
+        });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!isSwiping) return;
+        
+            const deltaX = e.touches[0].clientX - touchStartX;
+            const deltaY = e.touches[0].clientY - touchStartY;
+        
+            // If it's a vertical scroll, don't interfere
+            if (Math.abs(deltaY) > Math.abs(deltaX)) {
+                isSwiping = false; // It's a scroll, not a swipe
+                return;
+            }
+            // Prevent default to stop scrolling while swiping horizontally
+            e.preventDefault();
+
+        });
+
+        track.addEventListener('touchend', (e) => {
+            if (!isSwiping) return;
+        
+            touchEndX = e.changedTouches[0].clientX;
+            touchEndY = e.changedTouches[0].clientY;
+        
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+            const swipeThreshold = 50; // Minimum distance for a swipe
+        
+            // Check for horizontal swipe
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > swipeThreshold) {
+                if (deltaX < 0) {
+                    // Swiped left
+                    goToNext();
+                } else {
+                    // Swiped right
+                    goToPrev();
+                }
+            }
+            isSwiping = false;
+        });
+
+        window.addEventListener('resize', () => {
+            slideWidth = slides[0].getBoundingClientRect().width;
+            updateCarousel();
+        });
+
+        updateCarousel();
     }
 });
