@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImpactDrop | Early Access Waitlist</title>
+    <meta name="description" content="Be the first to back ImpactDrop. A water bottle that turns every refill into social impact. Join our crowdfunding launch list.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">ImpactDrop</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="badge">Coming Soon to Crowdfunding</span>
+                    <h1>Be first to back <span class="highlight">ImpactDrop.</span></h1>
+                    <p class="subtitle">A bottle with purpose. Join the list and get notified when our crowdfunding campaign goes live.</p>
+                    
+                    <div class="form-container" id="hero-form-container">
+                        <form class="waitlist-form" id="waitlist-form-hero">
+                            <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+                            <button type="submit" class="btn">Notify Me at Launch</button>
+                        </form>
+                        <p class="form-reassurance">Be the first to know when we launch.</p>
+                    </div>
+
+                    <div class="success-message" id="success-hero" style="display: none;">
+                        <h3>You're on the list!</h3>
+                        <p>We'll notify you as soon as the campaign goes live. Thank you for your support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why ImpactDrop -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="icon">💧</div>
+                        <h3>Refill with purpose</h3>
+                        <p>Every time you refill your bottle, you contribute to global social impact projects.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">✨</div>
+                        <h3>Designed for everyday</h3>
+                        <p>A premium, minimal aesthetic that fits perfectly into your modern lifestyle.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🌍</div>
+                        <h3>Small actions, real impact</h3>
+                        <p>Turning a simple habit into a force for change. One drop at a time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Crowdfunding Teaser & 4. Visual Section -->
+        <section class="teaser">
+            <div class="container">
+                <div class="teaser-content">
+                    <div class="teaser-text">
+                        <h2>The first campaign is coming soon.</h2>
+                        <p>We are preparing our very first crowdfunding launch. Early backers will receive exclusive pricing and limited edition rewards. Don't miss your chance to be part of the foundation.</p>
+                    </div>
+                    <div class="teaser-image">
+                        <!-- Placeholder for bottle / app image -->
+                        <img src="../images/product.jpg" alt="ImpactDrop Bottle Preview" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Final CTA -->
+        <section class="cta">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>Ready for the first drop?</h2>
+                    <p>Join the early list for launch updates and exclusive backer rewards.</p>
+                    
+                    <div class="form-container" id="footer-form-container">
+                        <form class="waitlist-form" id="waitlist-form-footer" action="https://formspree.io/f/xgopbnee" method="POST">
+                            <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
+                            <button type="submit" class="btn">Join the Early List</button>
+                        </form>
+                    </div>
+
+                    <div class="success-message" id="success-footer" style="display: none;">
+                        <h3>Welcome to the community!</h3>
+                        <p>You'll be the first to receive updates on our journey to launch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
+            <div class="social">
+                <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
