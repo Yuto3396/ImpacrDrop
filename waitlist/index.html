@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ImpactDrop | Early Access Waitlist</title>
-    <meta name="description" content="Be the first to back ImpactDrop. A water bottle that turns every refill into social impact. Join our crowdfunding launch list.">
+    <title>ImpactDrop | 早期アクセス・ウェイトリスト</title>
+    <meta name="description" content="ImpactDropのクラウドファンディング開始通知を受け取ろう。マイボトルで社会貢献を。">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,10 +13,29 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="waitlist-page">
     <header class="header">
-        <div class="container">
-            <a href="/" class="logo">ImpactDrop</a>
+        <div class="container nav-container">
+            <a href="../" class="logo">ImpactDrop</a>
+            <div class="nav-right">
+                <div class="lang-switcher-wrapper">
+                    <button id="lang-switcher"></button>
+                </div>
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="../#features" data-lang-ja="製品特徴" data-lang-en="Features">製品特徴</a></li>
+                <li><a href="../#mission" data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</a></li>
+                <li><a href="../#impact" data-lang-ja="社会貢献" data-lang-en="Our Impact">社会貢献</a></li>
+                <li><a href="../company-profile.html" data-lang-ja="会社概要" data-lang-en="Company Profile">会社概要</a></li>
+                <li><a href="./" data-lang-ja="早期アクセス" data-lang-en="Early Access">早期アクセス</a></li>
+            </ul>
         </div>
     </header>
 
@@ -25,21 +44,21 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
-                    <span class="badge">Coming Soon to Crowdfunding</span>
-                    <h1>Be first to back <span class="highlight">ImpactDrop.</span></h1>
-                    <p class="subtitle">A bottle with purpose. Join the list and get notified when our crowdfunding campaign goes live.</p>
+                    <span class="badge" data-lang-ja="クラウドファンディング近日開始" data-lang-en="Coming Soon to Crowdfunding">クラウドファンディング近日開始</span>
+                    <h1 data-lang-ja="ImpactDrop を、誰よりも早く。" data-lang-en="Be first to back ImpactDrop.">ImpactDrop を、誰よりも早く。</h1>
+                    <p class="subtitle" data-lang-ja="日常のリフィルが、世界の誰かの支援に。最新のローンチ情報を受け取るために、リストに登録してください。" data-lang-en="A bottle with purpose. Join the list and get notified when our crowdfunding campaign goes live.">日常のリフィルが、世界の誰かの支援に。最新のローンチ情報を受け取るために、リストに登録してください。</p>
                     
                     <div class="form-container" id="hero-form-container">
-                        <form class="waitlist-form" id="waitlist-form-hero">
-                            <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
-                            <button type="submit" class="btn">Notify Me at Launch</button>
+                        <form class="waitlist-form" id="waitlist-form-hero" action="https://formspree.io/f/xgopbnee" method="POST">
+                            <input type="email" name="email" placeholder="メールアドレスを入力" data-lang-placeholder-ja="メールアドレスを入力" data-lang-placeholder-en="Enter your email" required aria-label="Email address">
+                            <button type="submit" class="btn" data-lang-ja="ローンチ通知を受け取る" data-lang-en="Notify Me at Launch">ローンチ通知を受け取る</button>
                         </form>
-                        <p class="form-reassurance">Be the first to know when we launch.</p>
+                        <p class="form-reassurance" data-lang-ja="ローンチ時に最初にお知らせします。" data-lang-en="Be the first to know when we launch.">ローンチ時に最初にお知らせします。</p>
                     </div>
 
                     <div class="success-message" id="success-hero" style="display: none;">
-                        <h3>You're on the list!</h3>
-                        <p>We'll notify you as soon as the campaign goes live. Thank you for your support.</p>
+                        <h3 data-lang-ja="登録が完了しました！" data-lang-en="You're on the list!">登録が完了しました！</h3>
+                        <p data-lang-ja="キャンペーン開始時にメールでお知らせします。ご協力ありがとうございます。" data-lang-en="We'll notify you as soon as the campaign goes live. Thank you for your support.">キャンペーン開始時にメールでお知らせします。ご協力ありがとうございます。</p>
                     </div>
                 </div>
             </div>
@@ -51,18 +70,18 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <div class="icon">💧</div>
-                        <h3>Refill with purpose</h3>
-                        <p>Every time you refill your bottle, you contribute to global social impact projects.</p>
+                        <h3 data-lang-ja="目的のあるリフィル" data-lang-en="Refill with purpose">目的のあるリフィル</h3>
+                        <p data-lang-ja="ボトルをリフィルするたびに、世界の社会貢献プロジェクトへの支援につながります。" data-lang-en="Every time you refill your bottle, you contribute to global social impact projects.">ボトルをリフィルするたびに、世界の社会貢献プロジェクトへの支援につながります。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">✨</div>
-                        <h3>Designed for everyday</h3>
-                        <p>A premium, minimal aesthetic that fits perfectly into your modern lifestyle.</p>
+                        <h3 data-lang-ja="日常に溶け込むデザイン" data-lang-en="Designed for everyday">日常に溶け込むデザイン</h3>
+                        <p data-lang-ja="モダンなライフスタイルに完璧にフィットする、プレミアムでミニマルな美学。" data-lang-en="A premium, minimal aesthetic that fits perfectly into your modern lifestyle.">モダンなライフスタイルに完璧にフィットする、プレミアムでミニマルな美学。</p>
                     </div>
                     <div class="feature-card">
                         <div class="icon">🌍</div>
-                        <h3>Small actions, real impact</h3>
-                        <p>Turning a simple habit into a force for change. One drop at a time.</p>
+                        <h3 data-lang-ja="小さな行動、大きな変化" data-lang-en="Small actions, real impact">小さな行動、大きな変化</h3>
+                        <p data-lang-ja="シンプルな習慣を、世界を変える力に。一滴から始まるインパクト。" data-lang-en="Turning a simple habit into a force for change. One drop at a time.">シンプルな習慣を、世界を変える力に。一滴から始まるインパクト。</p>
                     </div>
                 </div>
             </div>
@@ -73,11 +92,10 @@
             <div class="container">
                 <div class="teaser-content">
                     <div class="teaser-text">
-                        <h2>The first campaign is coming soon.</h2>
-                        <p>We are preparing our very first crowdfunding launch. Early backers will receive exclusive pricing and limited edition rewards. Don't miss your chance to be part of the foundation.</p>
+                        <h2 data-lang-ja="初めてのキャンペーン、まもなく。" data-lang-en="The first campaign is coming soon.">初めてのキャンペーン、まもなく。</h2>
+                        <p data-lang-ja="初のクラウドファンディング・ローンチの準備を進めています。早期支援者には、限定価格や特別リワードをご用意しています。この旅の始まりに、あなたも加わりませんか？" data-lang-en="We are preparing our very first crowdfunding launch. Early backers will receive exclusive pricing and limited edition rewards. Don't miss your chance to be part of the foundation.">初のクラウドファンディング・ローンチの準備を進めています。早期支援者には、限定価格や特別リワードをご用意しています。この旅の始まりに、あなたも加わりませんか？</p>
                     </div>
                     <div class="teaser-image">
-                        <!-- Placeholder for bottle / app image -->
                         <img src="../images/product.jpg" alt="ImpactDrop Bottle Preview" class="img-responsive">
                     </div>
                 </div>
@@ -88,19 +106,19 @@
         <section class="cta">
             <div class="container">
                 <div class="cta-box">
-                    <h2>Ready for the first drop?</h2>
-                    <p>Join the early list for launch updates and exclusive backer rewards.</p>
+                    <h2 data-lang-ja="最初の「一滴」を共に。" data-lang-en="Ready for the first drop?">最初の「一滴」を共に。</h2>
+                    <p data-lang-ja="早期リストに登録して、ローンチ情報と限定特典を受け取りましょう。" data-lang-en="Join the early list for launch updates and exclusive backer rewards.">早期リストに登録して、ローンチ情報と限定特典を受け取りましょう。</p>
                     
                     <div class="form-container" id="footer-form-container">
                         <form class="waitlist-form" id="waitlist-form-footer" action="https://formspree.io/f/xgopbnee" method="POST">
-                            <input type="email" name="email" placeholder="Enter your email" required aria-label="Email address">
-                            <button type="submit" class="btn">Join the Early List</button>
+                            <input type="email" name="email" placeholder="メールアドレスを入力" data-lang-placeholder-ja="メールアドレスを入力" data-lang-placeholder-en="Enter your email" required aria-label="Email address">
+                            <button type="submit" class="btn" data-lang-ja="早期リストに加わる" data-lang-en="Join the Early List">早期リストに加わる</button>
                         </form>
                     </div>
 
                     <div class="success-message" id="success-footer" style="display: none;">
-                        <h3>Welcome to the community!</h3>
-                        <p>You'll be the first to receive updates on our journey to launch.</p>
+                        <h3 data-lang-ja="コミュニティへようこそ！" data-lang-en="Welcome to the community!">コミュニティへようこそ！</h3>
+                        <p data-lang-ja="ローンチに向けたアップデートを、誰よりも早くお届けします。" data-lang-en="You'll be the first to receive updates on our journey to launch.">ローンチに向けたアップデートを、誰よりも早くお届けします。</p>
                     </div>
                 </div>
             </div>
