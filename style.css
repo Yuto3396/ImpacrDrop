@@ -7,8 +7,8 @@ html {
 
 :root {
     --bg-color: #FFFFFF;
-    --bg-gray: #F9F9F9;
-    --text-color: #333333;
+    --bg-gray: #fafaf9; /* Warm Off-White instead of cold gray */
+    --text-color: #1a1a1a;
     --primary-color: #0A2E1B; /* Deep Green */
     --accent-color: #D4AF37; /* Gold */
     --white: #FFFFFF;
