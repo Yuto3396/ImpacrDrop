@@ -9,7 +9,10 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -39,13 +42,13 @@
         </div>
     </header>
 
-    <main>
+    <main class="main-content">
         <!-- 1. Hero Section -->
         <section class="hero">
-            <div class="container">
+            <div class="container content-narrow">
                 <div class="hero-content">
                     <span class="badge" data-lang-ja="クラウドファンディング近日開始" data-lang-en="Coming Soon to Crowdfunding">クラウドファンディング近日開始</span>
-                    <h1 data-lang-ja="ImpactDrop を、誰よりも早く。" data-lang-en="Be first to back ImpactDrop.">ImpactDrop を、誰よりも早く。</h1>
+                    <h1 class="premium-title" data-lang-ja="ImpactDrop を、誰よりも早く。" data-lang-en="Be first to back ImpactDrop.">ImpactDrop を、誰よりも早く。</h1>
                     <p class="subtitle" data-lang-ja="日常のリフィルが、世界の誰かの支援に。最新のローンチ情報を受け取るために、リストに登録してください。" data-lang-en="A bottle with purpose. Join the list and get notified when our crowdfunding campaign goes live.">日常のリフィルが、世界の誰かの支援に。最新のローンチ情報を受け取るために、リストに登録してください。</p>
                     
                     <div class="form-container" id="hero-form-container">
@@ -53,7 +56,6 @@
                             <input type="email" name="email" placeholder="メールアドレスを入力" data-lang-placeholder-ja="メールアドレスを入力" data-lang-placeholder-en="Enter your email" required aria-label="Email address">
                             <button type="submit" class="btn" data-lang-ja="ローンチ通知を受け取る" data-lang-en="Notify Me at Launch">ローンチ通知を受け取る</button>
                         </form>
-                        <p class="form-reassurance" data-lang-ja="ローンチ時に最初にお知らせします。" data-lang-en="Be the first to know when we launch.">ローンチ時に最初にお知らせします。</p>
                     </div>
 
                     <div class="success-message" id="success-hero" style="display: none;">
@@ -64,22 +66,26 @@
             </div>
         </section>
 
+        <div class="container content-narrow">
+            <hr class="section-divider">
+        </div>
+
         <!-- 2. Why ImpactDrop -->
         <section class="features">
-            <div class="container">
+            <div class="container content-narrow">
                 <div class="features-grid">
                     <div class="feature-card">
-                        <div class="icon">💧</div>
+                        <div class="icon"><i data-lucide="droplet"></i></div>
                         <h3 data-lang-ja="目的のあるリフィル" data-lang-en="Refill with purpose">目的のあるリフィル</h3>
                         <p data-lang-ja="ボトルをリフィルするたびに、世界の社会貢献プロジェクトへの支援につながります。" data-lang-en="Every time you refill your bottle, you contribute to global social impact projects.">ボトルをリフィルするたびに、世界の社会貢献プロジェクトへの支援につながります。</p>
                     </div>
                     <div class="feature-card">
-                        <div class="icon">✨</div>
+                        <div class="icon"><i data-lucide="sparkles"></i></div>
                         <h3 data-lang-ja="日常に溶け込むデザイン" data-lang-en="Designed for everyday">日常に溶け込むデザイン</h3>
                         <p data-lang-ja="モダンなライフスタイルに完璧にフィットする、プレミアムでミニマルな美学。" data-lang-en="A premium, minimal aesthetic that fits perfectly into your modern lifestyle.">モダンなライフスタイルに完璧にフィットする、プレミアムでミニマルな美学。</p>
                     </div>
                     <div class="feature-card">
-                        <div class="icon">🌍</div>
+                        <div class="icon"><i data-lucide="globe"></i></div>
                         <h3 data-lang-ja="小さな行動、大きな変化" data-lang-en="Small actions, real impact">小さな行動、大きな変化</h3>
                         <p data-lang-ja="シンプルな習慣を、世界を変える力に。一滴から始まるインパクト。" data-lang-en="Turning a simple habit into a force for change. One drop at a time.">シンプルな習慣を、世界を変える力に。一滴から始まるインパクト。</p>
                     </div>
@@ -87,24 +93,32 @@
             </div>
         </section>
 
-        <!-- 3. Crowdfunding Teaser & 4. Visual Section -->
+        <div class="container content-narrow">
+            <hr class="section-divider">
+        </div>
+
+        <!-- 3. Crowdfunding Teaser -->
         <section class="teaser">
-            <div class="container">
+            <div class="container content-narrow">
                 <div class="teaser-content">
                     <div class="teaser-text">
                         <h2 data-lang-ja="初めてのキャンペーン、まもなく。" data-lang-en="The first campaign is coming soon.">初めてのキャンペーン、まもなく。</h2>
                         <p data-lang-ja="初のクラウドファンディング・ローンチの準備を進めています。早期支援者には、限定価格や特別リワードをご用意しています。この旅の始まりに、あなたも加わりませんか？" data-lang-en="We are preparing our very first crowdfunding launch. Early backers will receive exclusive pricing and limited edition rewards. Don't miss your chance to be part of the foundation.">初のクラウドファンディング・ローンチの準備を進めています。早期支援者には、限定価格や特別リワードをご用意しています。この旅の始まりに、あなたも加わりませんか？</p>
                     </div>
-                    <div class="teaser-image">
-                        <img src="../images/product.jpg" alt="ImpactDrop Bottle Preview" class="img-responsive">
-                    </div>
+                </div>
+                <div class="teaser-image-wrapper">
+                    <img src="../images/product.jpg" alt="ImpactDrop Bottle Preview" class="img-premium">
                 </div>
             </div>
         </section>
 
+        <div class="container content-narrow">
+            <hr class="section-divider">
+        </div>
+
         <!-- 5. Final CTA -->
         <section class="cta">
-            <div class="container">
+            <div class="container content-narrow">
                 <div class="cta-box">
                     <h2 data-lang-ja="最初の「一滴」を共に。" data-lang-en="Ready for the first drop?">最初の「一滴」を共に。</h2>
                     <p data-lang-ja="早期リストに登録して、ローンチ情報と限定特典を受け取りましょう。" data-lang-en="Join the early list for launch updates and exclusive backer rewards.">早期リストに登録して、ローンチ情報と限定特典を受け取りましょう。</p>
@@ -112,7 +126,7 @@
                     <div class="form-container" id="footer-form-container">
                         <form class="waitlist-form" id="waitlist-form-footer" action="https://formspree.io/f/xgopbnee" method="POST">
                             <input type="email" name="email" placeholder="メールアドレスを入力" data-lang-placeholder-ja="メールアドレスを入力" data-lang-placeholder-en="Enter your email" required aria-label="Email address">
-                            <button type="submit" class="btn" data-lang-ja="早期リストに加わる" data-lang-en="Join the Early List">早期リストに加わる</button>
+                            <button type="submit" class="btn btn-outline" data-lang-ja="早期リストに加わる" data-lang-en="Join the Early List">早期リストに加わる</button>
                         </form>
                     </div>
 
@@ -126,7 +140,7 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container content-narrow">
             <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
             <div class="social">
                 <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>

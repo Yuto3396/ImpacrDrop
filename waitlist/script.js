@@ -127,4 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (footerForm) {
         footerForm.addEventListener('submit', (e) => handleSubmit(e, footerFormContainer, successFooter));
     }
+
+    // Initialize Lucide Icons
+    if (window.lucide) {
+        window.lucide.createIcons();
+    }
 });

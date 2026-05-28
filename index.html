@@ -1,212 +1,245 @@
-    <!DOCTYPE html>
-    <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>ImpactDrop｜マイボトルで社会貢献できる次世代ウォーターブランド</title>
-        <meta name="description" content="ImpactDropは、高校生が立ち上げた社会貢献型ウォーターブランド。マイボトルを使うだけで世界の誰かの支援につながります。日常の“水を飲む”をインパクトに変えるプロジェクトです。">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    <body>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang-ja="ImpactDrop | 毎日のリフィルを社会貢献へ" data-lang-en="ImpactDrop | Turning Daily Actions into Global Impact">ImpactDrop | 毎日のリフィルを社会貢献へ</title>
+    <meta name="description" content="ImpactDrop is a social impact platform that converts everyday refill behavior into charitable donations. Founded by Yuto Tsutsumi.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <header class="main-header">
-            <div class="container">
-                <nav class="main-nav">
-                    <a href="#" class="logo">ImpactDrop</a>
-                    <ul class="desktop-nav">
-                        <li><a href="company-profile.html" data-lang-ja="会社概要" data-lang-en="Company Profile">会社概要</a></li>
-                    </ul>
-                    <div class="nav-right">
-                        <div class="lang-switcher-wrapper">
-                            <button id="lang-switcher"></button>
-                        </div>
-                        <button class="hamburger-menu" id="hamburger-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </button>
-                    </div>
+    <header class="header">
+        <div class="container">
+            <a href="/" class="logo">ImpactDrop</a>
+            <div class="nav-wrapper">
+                <nav class="nav">
+                    <button id="lang-switcher" class="lang-toggle" data-current-lang="ja">English</button>
+                    <a href="/waitlist/" class="nav-cta" data-lang-ja="ウェイトリストに登録" data-lang-en="Join the Waitlist">ウェイトリストに登録</a>
                 </nav>
-                <div class="mobile-nav" id="mobile-nav">
-                    <ul>
-                        <li><a href="#features" data-lang-ja="製品特徴" data-lang-en="Features">製品特徴</a></li>
-                        <li><a href="#mission" data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</a></li>
-                        <li><a href="#impact" data-lang-ja="社会貢献" data-lang-en="Our Impact">社会貢献</a></li>
-                        <li><a href="company-profile.html" data-lang-ja="会社概要" data-lang-en="Company Profile">会社概要</a></li>
-                        <li><a href="waitlist/" data-lang-ja="早期アクセス" data-lang-en="Early Access">早期アクセス</a></li>
-                    </ul>
-                </div>
+                <button class="hamburger-menu" id="hamburger-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-        </header>
+        </div>
+        <div class="mobile-nav" id="mobile-nav">
+            <ul>
+                <li><a href="#problem" data-lang-ja="解決する課題" data-lang-en="The Problem">解決する課題</a></li>
+                <li><a href="#approach" data-lang-ja="アプローチ" data-lang-en="Our Approach">アプローチ</a></li>
+                <li><a href="#how-it-works" data-lang-ja="仕組み" data-lang-en="How It Works">仕組み</a></li>
+                <li><a href="/company-profile.html" data-lang-ja="会社概要" data-lang-en="Company Profile">会社概要</a></li>
+                <li><a href="/waitlist/" class="nav-cta" data-lang-ja="ウェイトリストに登録" data-lang-en="Join the Waitlist">ウェイトリストに登録</a></li>
+            </ul>
+        </div>
+    </header>
 
-        <main>
-            <section id="hero">
-                <div class="hero-content">
-                    <h1 data-lang-ja="日常を、社会的インパクトへ。" data-lang-en="Everyday life, into social impact.">日常を、社会的インパクトへ。</h1>
-                    <p data-lang-ja="ImpactDropは、ただのボトルじゃない。世界をより良くするための、次の一歩です。" data-lang-en="ImpactDrop is more than just a bottle. It's the next step toward a better world.">ImpactDropは、ただのボトルじゃない。世界をより良くするための、次の一歩です。</p>
-                    <a href="#shop" class="btn" data-lang-ja="すべての製品を見る" data-lang-en="View All Products">すべての製品を見る</a>
-                </div>
-            </section>
-
-            <section id="features" class="section section-bg-gray">
-                <div class="container">
-                    <h2 class="section-title" data-lang-ja="未来を選ぶ、理由がある。" data-lang-en="The Future is Clear. The Choice is Yours.">未来を選ぶ、理由がある。</h2>
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <h3 data-lang-ja="サステナブルな素材" data-lang-en="Sustainable Materials">サステナブルな素材</h3>
-                            <p data-lang-ja="環境負荷の少ないエコフレンドリーな素材のみを使用。自然を守りながら、最高の品質を届けます。" data-lang-en="We use only eco-friendly materials with a low environmental impact, delivering the highest quality while protecting nature.">環境負荷の少ないエコフレンドリーな素材のみを使用。自然を守りながら、最高の品質を届けます。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 data-lang-ja="洗練されたデザイン" data-lang-en="Sophisticated Design">洗練されたデザイン</h3>
-                            <p data-lang-ja="どんなライフスタイルにも溶け込む、ミニマルでモダンなデザイン。ダークグリーンと黒の2色展開。" data-lang-en="A minimal, modern design that blends into any lifestyle. Available in dark green and matte black.">どんなライフスタイルにも溶け込む、ミニマルでモダンなデザイン。ダークグリーンと黒の2色展開。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 data-lang-ja="妥協しない機能性" data-lang-en="Uncompromising Functionality">妥協しない機能性</h3>
-                            <p data-lang-ja="24時間の保冷、12時間の保温機能。いつでも最適な温度で、あなたの一日をサポートします。" data-lang-en="24-hour cold and 12-hour hot retention. Supporting your day at the perfect temperature, anytime.">24時間の保冷、12時間の保温機能。いつでも最適な温度で、あなたの一日をサポートします。</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="details" class="section">
-                <div class="container">
-                    <div class="details-text">
-                        <h2 data-lang-ja="細部へのこだわり" data-lang-en="Attention to Detail">細部へのこだわり</h2>
-                        <p data-lang-ja="ボトル内部には、医療グレードの18/8ステンレススチールを採用。錆びにくく、飲み物の味を損ないません。BPAフリーの素材で、あなたの健康と安全を第一に考えています。" data-lang-en="The interior is made of medical-grade 18/8 stainless steel, which is rust-resistant and preserves the original taste of your drink. Made with BPA-free materials, prioritizing your health and safety.">ボトル内部には、医療グレードの18/8ステンレススチールを採用。錆びにくく、飲み物の味を損ないません。BPAフリーの素材で、あなたの健康と安全を第一に考えています。</p>
-                        <p data-lang-ja="独自の二重真空断熱構造により、驚異的な保温・保冷性能を実現。手入れのしやすい広口設計で、いつでも清潔に保てます。" data-lang-en="Our unique double-wall vacuum insulation provides incredible temperature retention. The wide-mouth design makes it easy to clean and maintain.">独自の二重真空断熱構造により、驚異的な保温・保冷性能を実現。手入れのしやすい広口設計で、いつでも清潔に保てます。</p>
-                    </div>
-                    <div class="details-image">
-                        <img src="images/IMG_7064.JPG" alt="製品内部の高品質なステンレススチール" data-lang-ja-alt="製品内部の高品質なステンレススチール" data-lang-en-alt="High-quality stainless steel interior of the product">
-                    </div>
-                </div>
-            </section>
-
-            <section id="app-features" class="section section-bg-gray">
-                <div class="container">
-                    <h2 class="section-title" data-lang-ja="機能紹介" data-lang-en="App Features">機能紹介</h2>
-                    <div class="details-text">
-                        <p data-lang-ja="ImpactDropアプリは、日常のサステナブルな行動を“見える化”し、その積み重ねを社会的インパクトへとつなげるプラットフォームです。" data-lang-en="The ImpactDrop app is a platform that visualizes everyday sustainable actions and connects them to social impact.">ImpactDropアプリは、日常のサステナブルな行動を“見える化”し、その積み重ねを社会的インパクトへとつなげるプラットフォームです。</p>
-                        <p data-lang-ja="NFC機能を搭載したボトルと連携し、リフィル（給水）を記録。あなたのアクションが、リアルタイムで社会貢献へと循環していきます。" data-lang-en="Linked with an NFC-equipped bottle, it records your refills. Your actions contribute to social good in real time.">NFC機能を搭載したボトルと連携し、リフィル（給水）を記録。あなたのアクションが、リアルタイムで社会貢献へと循環していきます。</p>
-                    </div>
-                    <div class="carousel-container">
-                        <div class="carousel-track">
-                            <div class="carousel-slide">
-                                <img src="images/app_screenshot_1.png" alt="App Screenshot 1">
-                            </div>
-                            <div class="carousel-slide smartphone-view">
-                                <img src="images/app_screenshot_2.png" alt="App Screenshot 2">
-                            </div>
-                            <div class="carousel-slide smartphone-view">
-                                <img src="images/app_screenshot_3.png" alt="App Screenshot 3">
-                            </div>
-                        </div>
-                        <button class="carousel-button prev">&lt;</button>
-                        <button class="carousel-button next">&gt;</button>
-                        <div class="carousel-dots"></div>
-                    </div>
-                    <div class="features-grid app-features-grid">
-                        <div class="feature-item">
-                            <h3 data-lang-ja="リフィルの自動記録" data-lang-en="Automatic Refill Tracking">1. リフィルの自動記録</h3>
-                            <p data-lang-ja="NFCスキャンにより、給水回数を即時記録。手入力不要で、日々のアクションを正確に可視化します。" data-lang-en="Instantly record refills with an NFC scan. No manual entry needed, accurately visualizing your daily actions.">NFCスキャンにより、給水回数を即時記録。手入力不要で、日々のアクションを正確に可視化します。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 data-lang-ja="個人インパクトの可視化" data-lang-en="Visualize Personal Impact">2. 個人インパクトの可視化</h3>
-                            <p data-lang-ja="どれだけの社会的インパクトを生み出したかを確認できます。" data-lang-en="See the social impact you've created.">どれだけの社会的インパクトを生み出したかを確認できます。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 data-lang-ja="グローバルカウント" data-lang-en="Global Count">3. グローバルカウント</h3>
-                            <p data-lang-ja="すべてのユーザーの行動が一つの数字に。世界中のアクションがリアルタイムで積み上がります。" data-lang-en="All user actions contribute to a single number. Actions from around the world are tallied in real time.">すべてのユーザーの行動が一つの数字に。世界中のアクションがリアルタイムで積み上がります。</p>
-                        </div>
-                        <div class="feature-item">
-                            <h3 data-lang-ja="寄付連動モデル" data-lang-en="Donation-Linked Model">4. 寄付連動モデル</h3>
-                            <p data-lang-ja="リフィルの積み重ねは、提携団体への寄付へとつながる設計。日常が、支援へと変わります。" data-lang-en="Accumulated refills are designed to lead to donations to partner organizations. Your daily life turns into support.">リフィルの積み重ねは、提携団体への寄付へとつながる設計。日常が、支援へと変わります。</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="mission" class="section section-bg-gray">
-                <div class="container mission-container">
-                    <div class="mission-image-wrapper">
-                        <img src="images/Gemini_Generated_Image_6rczgw6rczgw6rcz.png" alt="ブランドミッション" data-lang-ja-alt="ブランドミッション" data-lang-en-alt="Our Mission">
-                        <div class="mission-statement">
-                            <p data-lang-ja="ブランドミッション：人々が日常の選択を通じて、世界にポジティブなインパクトをもたらせるようにする" data-lang-en="Our Mission: To empower people to make a positive impact on the world through their daily choices.">ブランドミッション：人々が日常の選択を通じて、世界にポジティブなインパクトをもたらせるようにする</p>
-                        </div>
-                    </div>
-                    <div class="mission-description">
-                        <h2 data-lang-ja="私たちの使命" data-lang-en="Our Mission">私たちの使命</h2>
-                        <p data-lang-ja="私たちの使命は、社会貢献を「特別なこと」から「日常の一部」に変えることです。" data-lang-en="Our mission is to change social contribution from something &quot;special&quot; to a &quot;part of daily life.&quot;">私たちの使命は、社会貢献を「特別なこと」から「日常の一部」に変えることです。</p>
-                        <p data-lang-ja="ImpactDropは、あなたの毎日のリフィルや行動を記録し、それが世界の誰かの希望に変わる仕組みをつくります。" data-lang-en="ImpactDrop records your daily refills and actions, creating a system where that turns into hope for someone in the world.">ImpactDropは、あなたの毎日のリフィルや行動を記録し、それが世界の誰かの希望に変わる仕組みをつくります。</p>
-                        <p data-lang-ja="小さな行動が積み重なれば、社会は必ず変えられる。" data-lang-en="If small actions accumulate, society can definitely be changed.">小さな行動が積み重なれば、社会は必ず変えられる。</p>
-                        <p data-lang-ja="その“第一滴（ファーストドロップ）”を生み出すのが、私たちの役割です。" data-lang-en="Our role is to create that &quot;first drop&quot;.">その“第一滴（ファーストドロップ）”を生み出すのが、私たちの役割です。</p>
-                    </div>
-                </div>
-            </section>
-
-
-
-            <section id="impact" class="section impact-section">
-                <div class="container">
-                    <div class="impact-content">
-                        <h2 data-lang-ja="あなたの選択が、世界を変える力になる。" data-lang-en="Your Choice, A Force for Change.">あなたの選択が、世界を変える力になる。</h2>
-                        <p data-lang-ja="ImpactDropは、世界の様々な慈善団体と連携し、困難な状況にある人々を支援する活動に貢献しています。" data-lang-en="ImpactDrop partners with various charitable organizations around the world to contribute to activities that support people in difficult situations.">ImpactDropは、世界の様々な慈善団体と連携し、困難な状況にある人々を支援する活動に貢献しています。</p>
-                        <div class="impact-details-grid">
-                            <div class="impact-detail-item">
-                                <h3 data-lang-ja="ボトル1本が..." data-lang-en="One Bottle...">ボトル1本が...</h3>
-                                <p class="large-text" data-lang-ja="希望" data-lang-en="Hope">希望</p>
-                                <p data-lang-ja="に変わります。製品の利益は、食糧、安全な水、教育など、最も支援を必要とする分野で活動する団体へ寄付されます。" data-lang-en="...becomes hope. Profits from our products are donated to organizations working in areas of greatest need, such as food, safe water, and education.">に変わります。製品の利益は、食糧、安全な水、教育など、最も支援を必要とする分野で活動する団体へ寄付されます。</p>
-                            </div>
-                            <div class="impact-detail-item">
-                                <h3 data-lang-ja="広がる支援の輪" data-lang-en="Expanding Circle of Support">広がる支援の輪</h3>
-                                <p class="large-text" data-lang-ja="多様な" data-lang-en="Diverse">多様な</p>
-                                <p data-lang-ja="活動へ。私たちは、特定の分野に限定せず、世界中の様々な課題解決に取り組む団体を支援します。" data-lang-en="support. We support organizations that tackle a wide range of global issues, not limited to a specific field.">活動へ。私たちは、特定の分野に限定せず、世界中の様々な課題解決に取り組む団体を支援します。</p>
-                            </div>
-                        </div>
-                        <div class="impact-counter-wrapper">
-                            <p data-lang-ja="私たちがこれまでに届けた支援" data-lang-en="Support We've Delivered So Far">私たちがこれまでに届けた支援</p>
-                            <div class="impact-counter">$0</div>
-                            <p data-lang-ja="この数字は、あなたと共に創り上げたものです。ありがとうございます。" data-lang-en="This number was built together with you. Thank you.">この数字は、あなたと共に創り上げたものです。ありがとうございます。</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="shop" class="section section-bg-gray">
-                <div class="container">
-                    <h2 class="section-title" data-lang-ja="製品ラインナップ" data-lang-en="Our Products">製品ラインナップ</h2>
-                    <div class="shop-grid">
-                        <div class="product-card">
-                            <img src="images/IMG_7062.JPG" alt="ImpactDrop ボトル - ダークグリーン" data-lang-ja-alt="ImpactDrop ボトル - ダークグリーン" data-lang-en-alt="ImpactDrop Bottle - Dark Green">
-                            <div class="product-info">
-                                <h3>ImpactDrop Bottle</h3>
-                                <p class="product-color" data-lang-ja="ダークグリーン" data-lang-en="Dark Green">ダークグリーン</p>
-                                <p class="coming-soon" data-lang-ja="近日発売" data-lang-en="Coming Soon">近日発売</p>
-                            </div>
-                        </div>
-                        <div class="product-card">
-                            <img src="images/IMG_7063.JPG" alt="ImpactDrop ボトル - マットブラック" data-lang-ja-alt="ImpactDrop ボトル - マットブラック" data-lang-en-alt="ImpactDrop Bottle - Matte Black">
-                            <div class="product-info">
-                                <h3>ImpactDrop Bottle</h3>
-                                <p class="product-color" data-lang-ja="マットブラック" data-lang-en="Matte Black">マットブラック</p>
-                                <p class="coming-soon" data-lang-ja="近日発売" data-lang-en="Coming Soon">近日発売</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="main-footer-bottom">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero reveal" id="hero">
             <div class="container">
-                <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
-                <div class="social-links">
-                    <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <h1 class="reveal-delay-1" data-lang-ja="毎日のリフィルが、世界を変える。" data-lang-en="Every Refill. Real Impact.">毎日のリフィルが、世界を変える。</h1>
+                <p class="reveal-delay-2" data-lang-ja="ImpactDropは、日常のリフィル行動を社会貢献へと変えるプラットフォームです。" data-lang-en="ImpactDrop turns your daily refill into a donation to the causes that matter.">ImpactDropは、日常のリフィル行動を社会貢献へと変えるプラットフォームです。</p>
+                <a href="/waitlist/" class="btn reveal-delay-3" data-lang-ja="ウェイトリストに登録" data-lang-en="Join the Waitlist">ウェイトリストに登録</a>
+            </div>
+        </section>
+
+        <!-- The Problem Section -->
+        <section class="problem reveal" id="problem">
+            <div class="container">
+                <h2 class="section-title reveal-delay-1" data-lang-ja="私たちが解決する課題" data-lang-en="The Problem We're Solving">私たちが解決する課題</h2>
+                <div class="problem-content">
+                    <p class="problem-text reveal-delay-2" data-lang-ja="世界中でNGOが直面している慢性的な資金不足。その原因は、人々の無関心ではなく、日常と支援をつなぐ仕組みがないことにあります。" data-lang-en="NGOs working to help people around the world face a chronic funding crisis — not because people don't care, but because there is no bridge between daily life and the causes that need support.">
+                        世界中でNGOが直面している慢性的な資金不足。その原因は、人々の無関心ではなく、日常と支援をつなぐ仕組みがないことにあります。
+                    </p>
+                    <p class="problem-accent reveal-delay-3" data-lang-ja="ImpactDropはその橋を作ります。" data-lang-en="ImpactDrop builds that bridge.">
+                        ImpactDropはその橋を作ります。
+                    </p>
                 </div>
             </div>
-        </footer>
+        </section>
 
-        <script src="script.js"></script>
-    </body>
-    </html>
+        <!-- Our Approach Section -->
+        <section class="approach reveal" id="approach">
+            <div class="container">
+                <h2 class="section-title reveal-delay-1" data-lang-ja="私たちのアプローチ" data-lang-en="Our Approach">私たちのアプローチ</h2>
+                <div class="approach-grid">
+                    <div class="approach-col reveal-delay-2">
+                        <h2 data-lang-ja="個人の方へ" data-lang-en="For Individuals">個人の方へ</h2>
+                        <p data-lang-ja="リフィルするだけ。インパクトが見える。追加費用なし。" data-lang-en="Refill your bottle. See your impact. No extra cost.">リフィルするだけ。インパクトが見える。追加費用なし。</p>
+                    </div>
+                    <div class="approach-col reveal-delay-3">
+                        <h2 data-lang-ja="企業パートナーの方へ" data-lang-en="For Corporate Partners">企業パートナーの方へ</h2>
+                        <p data-lang-ja="ESG目標を、個人の行動変容へ。検証済みのインパクトデータを提供します。" data-lang-en="Convert ESG goals into measurable individual behavior. Verified impact data.">ESG目標を、個人の行動変容へ。検証済みのインパクトデータを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section (Ecosystem Diagram) -->
+        <section class="how-it-works reveal" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title reveal-delay-1" data-lang-ja="仕組み" data-lang-en="How It Works">仕組み</h2>
+                <div class="ecosystem-container reveal-delay-2">
+                    <div class="ecosystem-top">
+                        <div class="ecosystem-card card-individual">
+                            <h3 class="card-title">Individual / 個人</h3>
+                            <p class="card-sub" data-lang-ja="ボトルをリフィルするだけ。追加費用なし。" data-lang-en="Refills bottle. No extra cost.">ボトルをリフィルするだけ。追加費用なし。</p>
+                        </div>
+                        
+                        <div class="ecosystem-arrow arrow-horizontal">
+                            <span class="arrow-label">refill</span>
+                            <div class="arrow-line"></div>
+                        </div>
+
+                        <div class="ecosystem-card card-impactdrop prominent">
+                            <h3 class="card-title">ImpactDrop</h3>
+                            <p class="card-sub" data-lang-ja="NFCがリフィルを記録。企業が寄付に変換。" data-lang-en="NFC records refill. Corporate converts to donation.">NFCがリフィルを記録。企業が寄付に変換。</p>
+                        </div>
+
+                        <div class="ecosystem-arrow arrow-horizontal">
+                            <span class="arrow-label">donation</span>
+                            <div class="arrow-line"></div>
+                        </div>
+
+                        <div class="ecosystem-card card-ngo">
+                            <h3 class="card-title">NGO partners</h3>
+                            <p class="card-sub" data-lang-ja="検証済みの寄付を受け取る。" data-lang-en="Receive verified funding.">検証済みの寄付を受け取る。</p>
+                        </div>
+                    </div>
+
+                    <div class="ecosystem-bottom">
+                        <div class="ecosystem-arrow arrow-vertical">
+                            <span class="arrow-label">funds</span>
+                            <div class="arrow-line"></div>
+                        </div>
+                        <div class="ecosystem-card card-corporate">
+                            <h3 class="card-title">Corporate sponsor / 企業スポンサー</h3>
+                            <p class="card-sub" data-lang-ja="ESG目標を達成。インパクトを証明。" data-lang-en="ESG goals met. Impact verified.">ESG目標を達成。インパクトを証明。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Preview Section -->
+        <hr class="section-divider">
+        <section class="app-preview reveal" id="app-preview">
+            <div class="container">
+                <h2 class="section-title reveal-delay-1" data-lang-ja="アプリ" data-lang-en="The App">アプリ</h2>
+                <div class="preview-grid reveal-delay-2">
+                    <div class="preview-item">
+                        <div class="phone-mockup large">
+                            <img src="images/IMG_2537.PNG" alt="Track Screen">
+                        </div>
+                        <p class="caption" data-lang-ja="リフィルとインパクトをリアルタイムで記録" data-lang-en="Track your refills and impact in real time">リフィルとインパクトをリアルタイムで記録</p>
+                    </div>
+                    <div class="preview-item">
+                        <div class="phone-mockup large">
+                            <img src="images/app_screenshot_2.png" alt="Donation Screen">
+                        </div>
+                        <p class="caption" data-lang-ja="寄付先をひと目で確認" data-lang-en="See exactly where your donations go">寄付先をひと目で確認</p>
+                    </div>
+                    <div class="preview-item">
+                        <div class="phone-mockup large">
+                            <img src="images/Gemini_Generated_Image_i0idgei0idgei0id.png" alt="Scan Screen">
+                        </div>
+                        <p class="caption" data-lang-ja="ワンタップでリフィルを記録" data-lang-en="One tap. One refill recorded.">ワンタップでリフィルを記録</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Bottle Section -->
+        <section class="product-showcase reveal">
+            <div class="container">
+                <div class="showcase-content">
+                    <div class="showcase-text reveal-delay-1">
+                        <h2 class="section-title left" data-lang-ja="美しさと機能の両立" data-lang-en="Design Meets Purpose">美しさと機能の両立</h2>
+                        <p class="showcase-description" data-lang-ja="ImpactDropのボトルは、単なる容器ではありません。日常の水分補給を社会貢献へと変える、あなたのパートナーです。" data-lang-en="The ImpactDrop bottle is more than just a vessel. It is your partner in turning daily hydration into global change.">
+                            ImpactDropのボトルは、単なる容器ではありません。日常の水分補給を社会貢献へと変える、あなたのパートナーです。
+                        </p>
+                        <div class="product-features">
+                            <div class="feature-item">
+                                <span class="feature-label">Sustainable</span>
+                                <p data-lang-ja="真空二重構造で長時間の保温・保冷が可能" data-lang-en="Double-wall vacuum insulation for long-lasting temperature control">真空二重構造で長時間の保温・保冷が可能</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-label">NFC Ready</span>
+                                <p data-lang-ja="キャップに埋め込まれたNFCタグで瞬時に記録" data-lang-en="Embedded NFC tag in the cap for instant impact tracking">キャップに埋め込まれたNFCタグで瞬時に記録</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="bottle-card">
+                            <img src="images/IMG_7062.JPG" alt="ImpactDrop Bottle - Dark Green" class="bottle-img">
+                            <div class="bottle-info">
+                                <h3>Dark Green</h3>
+                                <p data-lang-ja="洗練された深い森の色" data-lang-en="Deep forest sophistication">洗練された深い森の色</p>
+                            </div>
+                        </div>
+                        <div class="bottle-card">
+                            <img src="images/IMG_7063.JPG" alt="ImpactDrop Bottle - Matte Black" class="bottle-img">
+                            <div class="bottle-info">
+                                <h3>Matte Black</h3>
+                                <p data-lang-ja="時代を超えたミニマリズム" data-lang-en="Timeless minimalism">時代を超えたミニマリズム</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-footer">
+                    <p class="coming-soon" data-lang-ja="近日発売" data-lang-en="Coming Soon">Coming Soon</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder Section -->
+        <section class="founder reveal" id="founder">
+            <div class="container">
+                <div class="founder-photo reveal-delay-1">
+                    <img src="images/IMG_6714 4.jpg" alt="Yuto Tsutsumi (堤悠人)">
+                </div>
+                <div class="founder-info reveal-delay-2">
+                    <h3 class="founder-name">Yuto Tsutsumi (堤悠人)</h3>
+                    <p class="founder-title" data-lang-ja="株式会社ImpactDrop 代表取締役・創業者" data-lang-en="Founder & CEO, ImpactDrop">株式会社ImpactDrop 代表取締役・創業者</p>
+                    <p class="founder-bio" data-lang-ja="堤悠人は10年間、競技セーラーとして日本代表を務め、世界を舞台に戦った。その道中で海洋汚染を目の当たりにし、避難生活を送るアスリートや、安全な水すら持てないコミュニティと出会い、世界の課題には新たなアプローチが必要だと確信。すべての人が夢に向かって努力できる世界をつくるという信念のもと、ImpactDropを創業した。" data-lang-en="Yuto spent 10 years as a competitive sailor, representing Japan on the world stage. Along the way, he witnessed ocean pollution firsthand, met displaced athletes and communities without access to clean water, and came to believe that the world's problems demand new approaches. ImpactDrop was built on the conviction that everyone deserves the chance to pursue their dreams.">
+                        堤悠人は10年間、競技セーラーとして日本代表を務め、世界を舞台に戦った。その道中で海洋汚染を目の当たりにし、避難生活を送るアスリートや、安全な水すら持てないコミュニティと出会い、世界の課題には新たなアプローチが必要だと確信。すべての人が夢に向かって努力できる世界をつくるという信念のもと、ImpactDropを創業した。
+                    </p>
+                    <div class="achievements">
+                        <div class="achievement-item">
+                            <span data-lang-ja="全日本オプティミスト級 優勝" data-lang-en="National Champion — All-Japan Optimist Class">全日本オプティミスト級 優勝</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span data-lang-ja="世界選手権 日本代表（56カ国）" data-lang-en="World Championship — Japan Representative, 56 nations">世界選手権 日本代表（56カ国）</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span data-lang-ja="29級ユース世界選手権 出場" data-lang-en="29er Youth Worlds — Japan Representative">29級ユース世界選手権 出場</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span data-lang-ja="29級アジア選手権 3位" data-lang-en="29er Asia Championship — 3rd Place">29級アジア選手権 3位</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span data-lang-ja="TEDx 登壇" data-lang-en="TEDx Speaker — TEDx Keio High School">TEDx 登壇</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span data-lang-ja="松尾研究室 GCI修了" data-lang-en="University of Tokyo — GCI Program Graduate">松尾研究室 GCI修了</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 ImpactDrop. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/impact_drop/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>tml>tml>
